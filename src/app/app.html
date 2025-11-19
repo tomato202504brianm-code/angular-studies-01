@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="left">
+    <h2>Search</h2>
+    <input [(ngModel)]="searchPrefix" placeholder="Search Task">
+    <ul>
+      <li *ngFor="let i of searchTask">
+        {{ i }}
+      </li>
+    </ul>
+  </div>
+  <div class="right">
+
+    <button (click)="AddManyTasks(1000)">Generate 1000 Random Tasks</button>
+    <p >{{currList.length}}  </p>
+
+    <h1>List</h1>
+    <input [(ngModel)]="currAdd" (keyup.enter)="AddTask(currAdd)" placeholder="Add Task">
+    <button (click)="AddTask(currAdd)">Add</button>
+
+    <h2>Study list</h2>
+    <ul>
+      <li *ngFor="let i of currList" (click)="toggleTask(i)">
+        {{i.val}} -- {{i.done}}
+      </li>
+    </ul>
+
+    <h2>Recent list</h2>
+    <ul>
+      <li *ngFor="let i of lru.getLRU()" (click)="toggleTask(i)">
+        {{i.val}} -- {{i.done}}
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.left {
+  flex: 2; /* bigger left side */
+}
+
+.right {
+  flex: 1; /* smaller right side */
+  max-width: 300px;
+}
