@@ -1,0 +1,16 @@
+# Node modules
+node_modules/
+
+# Angular cache
+.angular/cache/
+
+# VS Code settings (optional)
+.vscode/
+
+# Build outputs
+dist/
+out-tsc/
+
+# System files
+.DS_Store
+Thumbs.db
